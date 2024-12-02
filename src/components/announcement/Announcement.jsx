@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 export default function Announcement({ announcement }) {
   return (
-    <div>{announcement}</div>
+    <div className='announcement'>{announcement}</div>
   )
 }

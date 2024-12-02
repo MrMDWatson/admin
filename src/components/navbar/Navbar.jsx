@@ -7,13 +7,13 @@ export default function Navbar() {
   const dispatch = useDispatch();
   const { admin } = useSelector((store) => store.app)
   return (
-    <div>
+    <nav className='navbar'>
       <ul>
         <li><Link to="/hub">Home</Link></li>
         <li><Link to="/hub/users">Users</Link></li>
         <li><Link to="/hub/new-user">New User</Link></li>
         <li>Settings</li>
       </ul>
-    </div>
+    </nav>
   )
 }
