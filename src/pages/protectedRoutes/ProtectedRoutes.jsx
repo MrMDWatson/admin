@@ -8,10 +8,10 @@ export default function ProtectedRoutes() {
   const { admin } = useSelector((store) => store.app);
   return admin 
     ? (
-      <div>
+      <>
         <Header />  
         <Outlet />
-      </div>
+      </>
     )
     : (<Login />)
 }

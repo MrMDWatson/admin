@@ -8,11 +8,12 @@ export default function Navbar() {
   const { admin } = useSelector((store) => store.app)
   return (
     <nav className='navbar'>
-      <ul>
-        <li><Link to="/hub">Home</Link></li>
-        <li><Link to="/hub/users">Users</Link></li>
-        <li><Link to="/hub/new-user">New User</Link></li>
-        <li>Settings</li>
+      <div className='logo'><Link>P</Link></div>
+      <ul className='nav-list'>
+        <li className='nav-list-item'><Link to="/hub">Home</Link></li>
+        <li className='nav-list-item'><Link to="/hub/users">Users</Link></li>
+        <li className='nav-list-item'><Link to="/hub/new-user">New User</Link></li>
+        <li className='nav-list-item'><Link to="/hub/settings">Settings</Link></li>
       </ul>
     </nav>
   )

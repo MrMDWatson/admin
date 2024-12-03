@@ -13,21 +13,23 @@ import ProtectedRoutes from "./pages/protectedRoutes/ProtectedRoutes";
 //import Product from "./pages/product/Product";
 //import UserList from "./pages/userList/UserList";
 //import ProductList from "./pages/productList/ProductList";
-//import "./App.css";
+import "./app.scss";
 
 function App() {
   const { admin } = useSelector((store) => store.app);
   return (
-    <Routes>
-      <Route index element={admin ? <Navigate to="/hub" /> : <Navigate to="/login" />} />
-      <Route path="login" element={admin ? <Navigate to="/hub" /> : <Login />} />
-      <Route path="hub" element={<ProtectedRoutes />}>
-        <Route index element={<Home />} />
-        <Route path="users" element={<Users />} />
-        <Route path="new-user" element={<NewUser />} />
-        <Route path="user/user-id:" element={<User />} />
-      </Route>   
-    </Routes>
+    <div className="app">
+      <Routes>
+        <Route index element={admin ? <Navigate to="/hub" /> : <Navigate to="/login" />} />
+        <Route path="login" element={admin ? <Navigate to="/hub" /> : <Login />} />
+        <Route path="hub" element={<ProtectedRoutes />}>
+          <Route index element={<Home />} />
+          <Route path="users" element={<Users />} />
+          <Route path="new-user" element={<NewUser />} />
+          <Route path="user/user-id:" element={<User />} />
+        </Route>   
+      </Routes>
+    </div>
   );
 }
 
