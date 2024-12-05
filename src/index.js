@@ -11,10 +11,10 @@ const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
-      <Provider store={store}>
-        <BrowserRouter basename="/">
-          <App />
-        </BrowserRouter>
-      </Provider>
+    <Provider store={store}>
+      <BrowserRouter basename="/">
+        <App />
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );
